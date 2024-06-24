@@ -18,17 +18,17 @@ import code.name.monkey.retromusic.util.PreferenceUtil
 
 fun AppCompatActivity.maybeSetScreenOn() {
     if (PreferenceUtil.isScreenOnEnabled) {
-        window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+        window.addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED)
     } else {
-        window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+        window.clearFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED)
     }
 }
 
 fun AppCompatActivity.keepScreenOn(keepScreenOn: Boolean) {
     if (keepScreenOn) {
-        window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+        window.addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED)
     } else {
-        window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+        window.clearFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED)
     }
 }
 
